@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="commands\ConnectionCommand.cpp" />
+    <ClCompile Include="commands\MessageReadyCommandProcessor.cpp" />
     <ClCompile Include="ConnectionDispatcher.cpp" />
     <ClCompile Include="Initializer.cpp" />
     <ClCompile Include="server_socket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="commands\MessageReadyCommandProcessor.hpp" />
     <ClInclude Include="ICommandDispatcher.h" />
     <ClInclude Include="commands\ConnectionCommand.h" />
     <ClInclude Include="ConnectionDispatcher.h" />

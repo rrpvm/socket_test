@@ -33,6 +33,9 @@
     <ClCompile Include="commands\ConnectionCommand.cpp">
       <Filter>Исходные файлы\commands</Filter>
     </ClCompile>
+    <ClCompile Include="commands\MessageReadyCommandProcessor.cpp">
+      <Filter>Исходные файлы\commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Initializer.h">
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="ICommandDispatcher.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\MessageReadyCommandProcessor.hpp">
+      <Filter>Файлы заголовков\commands</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Initializer.h"
 #include "ConnectionDispatcher.h"
+#include "commands/ConnectionCommand.h"
+#include "commands/MessageReadyCommandProcessor.hpp"
 void close(Initializer& loader) {
 	try {
 		loader.close();
@@ -15,6 +17,7 @@ void close(Initializer& loader) {
 }
 int main()
 {
+	setlocale(LC_ALL, "ru");
 	Initializer loader;
 	try {
 		loader.init();
@@ -24,9 +27,11 @@ int main()
 		close(loader);
 		return -1;
 	}
+	;
 	ConnectionDispatcher connectionDispatcher = ConnectionDispatcher(
 		loader.getSocket(),
-		{}
+		{ std::shared_ptr<ICommandDispatcher>(new ConnectionCommand()),
+		std::shared_ptr<ICommandDispatcher>(new MessageReadyCommandProcessor()) }
 	);
 	connectionDispatcher.startListen();
 	close(loader);

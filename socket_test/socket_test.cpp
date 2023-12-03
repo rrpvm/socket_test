@@ -15,6 +15,7 @@ void close(Initializer& loader) {
 }
 int main()
 {
+	setlocale(LC_ALL, "ru");
 	Initializer loader;
 	try {
 		loader.init();

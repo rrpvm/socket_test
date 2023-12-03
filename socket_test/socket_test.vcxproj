@@ -135,6 +135,7 @@
     <ClInclude Include="Initializer.h" />
     <ClInclude Include="ServerListenerDispatcher.h" />
     <ClInclude Include="SIngleton.hpp" />
+    <ClInclude Include="UserInfo.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
