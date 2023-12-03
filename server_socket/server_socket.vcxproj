@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="commands\ConnectionCommand.cpp" />
+    <ClCompile Include="ConnectionDispatcher.cpp" />
+    <ClCompile Include="Initializer.cpp" />
     <ClCompile Include="server_socket.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ICommandDispatcher.h" />
+    <ClInclude Include="commands\ConnectionCommand.h" />
+    <ClInclude Include="ConnectionDispatcher.h" />
+    <ClInclude Include="Initializer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

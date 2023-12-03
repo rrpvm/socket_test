@@ -127,7 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Initializer.cpp" />
+    <ClCompile Include="ServerListenerDispatcher.cpp" />
     <ClCompile Include="socket_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Initializer.h" />
+    <ClInclude Include="ServerListenerDispatcher.h" />
+    <ClInclude Include="SIngleton.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
