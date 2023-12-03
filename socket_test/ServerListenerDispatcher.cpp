@@ -3,6 +3,7 @@
 #include <map>
 #include "UserInfo.hpp"
 #include <vector>
+#include <thread>
 #define DEFAULT_BUFLEN 2048
 #define ENTER_USERNAME_MSG "ON_RRPVM_CONNECTION:"
 #define MESSAGE_SENT "MESSAGE_SENDING:"
@@ -44,7 +45,8 @@ void ServerListenerDispatcher::handleConnections(SOCKET listenSocket)
             return;
         }
         else {
-            handleConnection(result);
+            std::thread t(&ServerListenerDispatcher::handleConnection, this, result);
+            t.detach();
         }
 	}
 }
